@@ -28,11 +28,6 @@ with open(input, 'r') as inputFile:
     for y in master:
         counts.append(words.count(y))
 
-f = open(output, "w")
-n = len(master)
-for w in range(n):
-
-    f.write(str(master[w]) + " " +str(counts[w])+"\n")
-f.close()
-
-
+with open(output, 'w') as outputFile:
+    for w in range(len(master)):
+        outputFile.write(str(master[w]) + " " +str(counts[w])+"\n")
